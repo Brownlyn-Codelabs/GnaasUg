@@ -1,0 +1,1599 @@
+/* =======================================================================
+Template Name: Dil Hospital
+Author:  SmartEye Adminpanel
+Author URI: www.smarteyeapps.com
+Version: 1.0
+coder name:Prabin Raja
+Description: This Template is created for web template
+======================================================================= */
+
+/* ===================================== Import Less ================================== */
+@import 'variable';
+/* ===================================== Basic CSS ================================== */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+
+}
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    color: #444;
+}
+
+a:hover {
+    color: #444;
+}
+
+ul {
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+a:hover,
+a:focus,
+input,
+textarea {
+    text-decoration: none;
+    outline: none;
+}
+.center{
+    text-align: center;
+}
+.left{
+    text-align: left;
+}
+.right{
+    text-align: right;
+}
+.cp {
+    cursor: pointer
+}
+html,body{
+    height: 100%;
+}
+p {
+    margin-bottom: 0px;
+    width: 100%;
+}
+.no-padding {
+    padding: 0px;
+}
+
+.no-margin {
+    margin: 0px;
+
+}
+.hid{
+    display: none;
+}
+.top-mar{
+    margin-top: 15px;
+}
+.h-100{
+    height: 100%;;
+}
+::placeholder {
+    color: #747f8a !important;
+    font-size: 13px;
+    opacity: .5 !important;
+}
+.container-fluid{
+    padding: 0px;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: $mouse-500;
+}
+strong{
+	font-family: $mouse-500;
+}
+body{
+    background-color:#f7f7ff !important;
+    font-family: $mouse-300;
+    color: #444444;
+   
+}
+.session-title{
+	padding: 30px;
+	margin: 0px;
+	h2{
+		width: 100%;
+		text-align: center;
+	}
+	p{
+		max-width: 850px;
+		text-align: center;
+		float: none;
+		margin: auto;
+	}
+	span{
+		float: right;
+		font-style: italic;
+	}
+}
+.inner-title{
+	padding: 20px;
+	padding-left: 0px;
+	h2{
+		text-align: left;
+		font-size: 1.5rem;
+	}
+}
+.btn-success{
+	background-color: #b5316a;
+	border-color: #b5316a;
+	&:hover{
+		background-color: #b5316a !important;
+		border-color: #b5316a !important;
+	}
+	&:active{
+		background-color: #b5316a !important;
+		border-color: #b5316a !important;
+	}
+	&:focus{
+		background-color: #b5316a !important;
+		border-color: #b5316a !important;
+		box-shadow: none !important;
+	}
+}
+@media screen and (max-width: 1199px){
+	.container{
+		max-width: 100%;
+	}
+}
+
+
+/* ===================================== Header CSS ================================== */
+.absalute-content{
+	height: 660px;
+	@media screen and (max-width: 1199px){
+		height: 600px;
+	}
+	@media screen and (max-width: 1105px){
+		height: 500px;
+	}
+}
+header{
+	color: #FFFFFF;
+	position: absolute;
+	width: 100%;
+	top:0px;
+	height: 130px;
+	z-index: 999;
+	@include shado-1();
+	background-color: rgba(0,0,0,0.1);
+	.header-top{
+		border-bottom: 1px solid #707070;
+		
+		a{
+			color: #FFFFFF;
+		}
+		.left-top{
+			li{
+				float: left;
+				padding: 10px;
+			}
+		}
+		.right-top{
+			float: right;
+			li{
+				float: left;
+				padding: 10px 20px;
+			}
+		}
+	}
+	nav{
+		ul{
+			float: right;
+			li{
+				float: left;
+				padding: 30px 18px;
+				font-family: $mouse-500;
+				a{
+					color: #FFF;
+					&:hover{
+						color: #FFF;
+					}
+				}
+			}
+		}
+		
+	}
+	.sit-logo{
+		padding: 10px 0px;
+			img{
+				width: 270px;
+				float: left;
+			}
+		h4{
+			float: left;
+			margin-top: 24px;
+			padding-left: 5px;
+		}
+	}
+	@media screen and (max-width: 1199px){
+		nav{
+			.sit-logo{
+				padding-left: 10px;
+			}
+		}
+		
+	}
+	@media screen and (max-width: 1105px){
+		nav{
+			ul{
+				li{
+					font-size: 14px;
+					padding-top: 32px;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 1002px){
+		nav{
+			ul{
+				li{
+					font-size: 14px;
+					padding: 30px 14px; 
+					padding-top: 32px;
+					
+				}
+			}
+		}
+		.sit-logo{
+			img{
+				width: 270px;
+			}
+		}
+	}
+	@media screen and (max-width: 927px){
+		.nav-block{
+			padding: 0px;
+		}
+		nav{
+			ul{
+				li{
+					font-size: 13px;
+					padding: 30px 12px; 
+					padding-top: 32px;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 805px){
+		nav{
+			ul{
+				li{
+					padding: 30px 8px;
+					padding-top: 32px;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 767px){
+		nav{
+			.nav-block{
+				display: none;
+				background-color: rgba(0,0,0,0.5);
+				ul{
+					width: 100%;
+					li{
+						width: 100%;
+						padding: 15px !important;
+						border-bottom: 1px solid #CCC;
+					}
+				}
+			}
+		}
+		.left-top{
+			li{
+				font-size: 14px !important;
+			}
+		}
+	}
+	@media screen and (max-width: 400px){
+		.sit-logo img{
+			width: 200px;
+			margin-top: 10px;		}
+	}
+	.small-menu{
+		color: #FFFFFF;
+		float: right;
+		font-size: 32px;
+		padding: 18px;
+	}
+	
+	
+}
+.scroll-to-fixed-fixed{
+	.white-logo{
+		display: none !important;
+	}
+	.gray-logo{
+		display: block !important;
+	}
+		background-color: #FFFFFF;
+		@include shado-1();
+			.nav-block{
+				@media screen and (max-width: 767px){
+					background-color: #FFF;
+				}
+				ul{
+					li{
+						color: #444444 !important;
+						a{
+							color: #444444 !important;
+						}
+
+					}
+				}
+			}
+	.small-menu{
+		color: #b5316a;
+	}	
+	}
+/* ===================================== Slider CSS ================================== */
+
+.slider{
+	width: 100%;
+	overflow: hidden;
+	li{
+		width: 100%;
+		overflow: hidden;
+		height: 665px;
+		background-size: 100%;
+		ackground-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-position: right top;
+		position: absolute;
+		transition: visibility 0s, opacity 0.5s linear;
+		.slider-layer {
+			
+			background: rgba(197, 64, 102, 0.4);
+			background: -webkit-linear-gradient(top, rgba(73, 61, 104, 0.9), rgba(197, 64, 102, 0.4));
+			background: -moz-linear-gradient(top, rgba(73, 61, 104, 0.9), rgba(197, 64, 102, 0.4));
+			background: -o-linear-gradient(top, rgba(73, 61, 104, 0.9), rgba(197, 64, 102, 0.4));
+			background: -ms-linear-gradient(top, rgba(73, 61, 104, 0.9), rgba(197, 64, 102, 0.4));
+			background: linear-gradient(top, rgba(73, 61, 104, 0.9), rgba(197, 64, 102, 0.4));
+			width: 100%;
+			height:665px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			color: #FFFFFF;
+			padding-top: 180px;
+			
+			h1{
+				font-size: 64px;
+				text-align: center;
+				margin-top: 30px;
+				font-family: 'alegreya_bold_italic', serif;
+				transition: width 2s, height 4s;
+			}
+			p{
+				text-align: center;
+				font-size: 26px;
+				font-family: 'alegreya_bold_italic', serif;
+			}
+			span{
+				float: right;
+			}
+			.buttn-row{
+				margin-top: 60px;
+				text-align: center;
+				.btn{
+					padding: 10px 20px;
+					background-color: #FFF;
+					color: #444444;
+					@include card-1();
+					font-weight: 600;
+					margin-left: 20px;
+				}
+			}
+			
+		}
+	}
+	@media screen and (max-width: 1199px){
+		li{
+			height: 600px;
+			.slider-layer{
+				height: 600px;	
+			}
+		}
+	}
+	@media screen and (max-width: 1105px){
+		li{
+			height: 500px;
+			h1{
+				font-size: 44px !important;
+			}
+			p{
+				font-size: 22px !important;
+			}
+		}
+		.slider-layer{
+			padding-top: 130px !important;
+			height: 500px;
+		}
+	}
+	@media screen and (max-width: 922px){
+		 li{
+			background-position: center;
+			background-size: cover;
+		}
+	}
+	@media screen and (max-width: 580px){
+		li{
+			h1{
+				font-size: 34px !important;
+			}
+			p{
+				font-size: 20px !important;
+			}
+			.buttn-row{
+				margin-top: 20px;
+				.btn{
+					padding: 5px 10px !important;
+					font-size: 14px !important;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 400px){
+		li{
+			h1{
+				font-size: 24px !important;
+			}
+			p{
+				font-size: 18px !important;
+			}
+		}
+	}
+}
+
+/* ===================================== Pastors Desk CSS ================================== */
+
+.pastors-desk{
+	background: url("../images/bg.jpg") center center/cover no-repeat local;
+	position: relative;
+	height: 779px;
+	margin-top: 5px;
+	
+	.desk-layy{
+		background-color: rgba(255, 255, 255, 0.9);
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		padding: 50px;
+		
+	}
+	.pastor-img{
+		padding: 40px;
+		padding-bottom: 0px;	
+	}
+	.pastor-message{
+		padding-top: 80px;
+		padding-right: 40px;
+		p{
+			font-size: 14px;
+			text-indent: 30px;
+			margin-bottom: 12px;
+			text-align: justify;
+		}
+	}
+	@media screen and (max-width: 1134px){
+		.desk-layy{
+			padding: 30px 10px;
+		}	
+		.pastor-message{
+			padding-right: 10px;
+			padding-top: 10px;
+		}
+	}
+	@media screen and (max-width: 930px){
+		height: 890px;
+		.pastor-img{
+			padding: 10px;
+			padding-top: 80px;
+		}
+	}
+	@media screen and (max-width:575px){
+		height: 1100px;
+		.pastor-img{
+			text-align: center;
+			padding-top: 10px;
+			img{
+				width: 200px;
+			}
+		}
+		.pastor-message{
+			p{
+				font-size: 13px;
+			}
+		}
+	}
+	@media screen and (max-width:435px){
+		height: 1200px;
+	}
+	@media screen and (max-width:379px){
+		height: 1360px;
+	}
+}
+
+/* ===================================== Donations Start CSS ================================== */
+
+.donation-home{
+	background: url(../images/donation-bg.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	.donation-layy{
+		padding: 90px;
+		@media screen and (max-width:1075px){
+			padding: 30px 10px;
+		}
+		background: rgba(197, 64, 102, 0.4);
+		background: -webkit-linear-gradient(top, rgba(73, 61, 104, 0.9), rgba(197, 64, 102, 0.4));
+		background: -moz-linear-gradient(top, rgba(73, 61, 104, 0.9), rgba(197, 64, 102, 0.4));
+		background: -o-linear-gradient(top, rgba(73, 61, 104, 0.9), rgba(197, 64, 102, 0.4));
+		background: -ms-linear-gradient(top, rgba(73, 61, 104, 0.9), rgba(197, 64, 102, 0.4));
+		background: linear-gradient(top, rgba(73, 61, 104, 0.9), rgba(197, 64, 102, 0.4));
+		p{
+			text-align: center;
+			color: #FFF;
+			font-size: 22px;
+			line-height: 40px;
+			font-style: italic;
+		}
+		span{
+			font-size: 18px;
+		}
+		.buttn-row{
+			margin-top: 60px;
+			text-align: center;
+			.btn{
+				padding: 10px 20px;
+				background-color: #FFF;
+				color: #444444;
+				@include card-1();
+				font-weight: 600;
+				margin-left: 20px;
+			}
+		}
+	}
+}
+
+/* ===================================== Donations Start CSS ================================== */
+
+.news-events{
+	@media screen and (max-width: 1105px){
+		padding: 30px 10px;
+	}
+	padding: 50px;
+	background-color: #f8f8f8;
+	.blog-cover{
+		.singl-blog{
+			@include card-1();
+			background-color: #FFF;
+			margin-bottom: 17px;
+		}
+		.blog-data{
+			padding: 15px;
+			@media screen and (max-width: 1105px){
+				padding: 10px;
+			}
+			h4{
+				font-size: 17px;
+				
+			}
+			p{
+				font-size: .9rem;
+				text-indent: 10px;
+				text-align: justify;
+			}
+			.d-a-b{
+				font-size: .8rem;
+				margin-bottom: 10px;
+				.dat{
+					color: #b5316a;
+				}
+				.post-by{
+					float: right;
+					color: #8D8D8D;
+				}
+			}
+			.comment{
+				padding-left: 0px;
+				li{
+					float: left;
+					margin-right: 20px;
+					margin-top: 10px;
+					font-size: .8rem;
+				}
+			}
+		}
+	}
+	.event-cover{
+		
+		background-color: #FFFFFF;
+		@include card-1();
+		strong{
+			width: 100%;
+			padding-left: 10px;
+			
+		}
+		padding: 10px;
+		padding-bottom: 0px;
+		ul{
+			width: 100%;
+			margin-top: 7px;
+			margin-bottom: 7px;
+			li{
+				float: left;
+				width: 25%;
+				text-align: center;
+				font-size: 14px;
+				span{
+					font-size: 1.6rem;
+					font-family: $mouse-500;
+					color: #b5316a;
+				}
+			}
+		}
+	}
+	.event-list{
+		ul{
+			li{
+				padding: 10px;
+				width: 100%;
+				border-top: 1px solid #E5E5E5;
+				.list-dat{
+					padding: 8px 12px;
+					background-color: #b5316a;
+					color: #FFFFFF;
+					border-radius: 3px;
+					span{
+						color: #FFFFFF;
+					}
+				}
+				.list-detail{ 
+					text-align: left;
+					padding: 5px 10px;
+					span{
+						color: #b5316a;
+						font-size: .7rem;
+						
+					}
+					p{
+						font-family: $mouse-500;
+						margin-bottom: 3px;
+						font-size: .8rem;
+					}
+					small{
+						font-size: .8rem;
+					}
+				}
+			}
+			
+		}
+	}
+}
+
+/* ===================================== Testimonial Style  ================================= */
+
+.testimonial-container{
+    background-image: url("../images/testimonial_bg.jpg");
+	background-size: contain;
+    .layy{ 
+		padding: 30px;
+        height: 100%;
+        width: 100%;
+        background: rgba(197, 64, 102, 0.7);
+		background: -webkit-linear-gradient(top, rgba(73, 61, 104, 0.4), rgba(197, 64, 102, 0.7));
+		background: -moz-linear-gradient(top, rgba(73, 61, 104, 0.4), rgba(197, 64, 102, 0.7));
+		background: -o-linear-gradient(top, rgba(73, 61, 104, 0.4), rgba(197, 64, 102, 0.7));
+		background: -ms-linear-gradient(top, rgba(73, 61, 104, 0.4), rgba(197, 64, 102, 0.7));
+		background: linear-gradient(top, rgba(73, 61, 104, 0.4), rgba(197, 64, 102, 0.7));
+        @media screen and (max-width: 720px){
+            padding: 10px;
+        }
+		.session-title{
+			color: #FFFFFF;
+			margin-bottom: 20px;
+		}
+    }
+}
+
+/* ===================================== Sunday Service Style  ================================== */
+
+.service-timimg{
+	padding: 60px;
+	@media screen and (max-width: 957px){
+		padding: 30px 10px !important;
+	}
+	.sunday-service{
+		@include shado-1();
+		margin-bottom: 10px;
+		.service-layer{
+			background-color: rgba(0,0,0,0.7);
+			padding: 20px;
+			font-size: 1.8rem;
+			ul{
+				margin-top: 10px;
+				li{
+					font-size: 1.1rem;
+					span{
+						float: right;
+					}
+					padding: 5px;
+				}
+			}
+		}
+		background-image: url(../images/slider/banner_01.jpg);
+		background-size: 100%;
+		
+		color: #FFF;
+	}
+	.worship{
+		background-color: #b5316a;
+		height: 238px;
+		@include shado-1();
+		padding: 20px;
+		color: #FFFFFF;
+		font-size: 1.2rem;
+		text-align: center;
+		i{
+			font-size: 64px;
+			width: 100%; 
+			text-align: center;
+			margin-top: 18px;
+			
+		}
+		p{
+			font-size: 16px;
+			margin-top: 10px;
+		}
+	}
+}
+
+/* ===================================== Gallery Style  ================================== */
+
+.gallery{
+	padding: 40px;
+	background-color: #FFF;
+}
+.gallery-filter{
+    width: 100%;
+    text-align: center;
+	@media only screen and (max-width:640px){
+		.btn{
+			width: 100%;
+			margin-left: 0px;
+			margin-bottom: 10px;
+		}
+	}
+    .btn{
+        background-color: #FFF;
+		
+    }
+}
+.gallery{
+    padding: 30px;
+	@media screen and (max-width: 450px) {
+        padding: 30px 10px;
+    }
+    background-color: #FFF;
+}
+.gallery-title
+{
+    font-size: 36px;
+    color: #29509f;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 70px;
+}
+.gallery-title:after {
+    content: "";
+    position: absolute;
+    width: 7.5%;
+    left: 46.5%;
+    height: 45px;
+    border-bottom: 1px solid #b5316a;;
+}
+.filter-button
+{
+    font-size: 16px;
+    border: 1px solid #b5316a;;
+	margin-left: 20px;
+    border-radius: 0px;
+    text-align: center;
+    color: #b5316a;
+    margin-bottom: 30px;
+	padding: 3px 10px;
+
+}
+.filter-button:hover
+{
+    font-size: 16px;
+    border: 1px solid #b5316a;;
+    border-radius: 5px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #b5316a;;
+
+}
+.btn-default:active .filter-button:active
+{
+    background-color: #29509f;
+    color: white;
+}
+
+.port-image
+{
+    width: 100%;
+}
+
+.gallery_product
+{
+    margin-bottom: 30px;
+	img{
+		background-color: #FFF;
+		
+		@importe card-1();
+	}
+}
+.box{
+   
+    overflow: hidden;
+    position: relative;
+	
+	@importe shado-1();
+}
+.box:before,
+.box:after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: all 0.3s ease 0s;
+}
+.box:after{
+    background-color: rgba(255,255,255,0.5);
+    opacity: 1;
+    top: -100%;
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 40%, 0 60%);
+    clip-path: polygon(0 0, 100% 0%, 100% 40%, 0 60%);
+}
+.box:hover:before{ opacity: 1; }
+.box:hover:after{ top: 0; }
+.box img{
+    width: 100%;
+    height: auto;
+    transition: all 0.3s ease 0s;
+	background-color: #FFF;
+	
+	@importe card-1();
+}
+.box:hover img{
+    filter: blur(2px) grayscale(60%) ;
+    transform: scale(1.2);
+}
+.box .box-content{
+    text-align: center;
+    width: 100%;
+    padding: 15px 0 0 15px;
+    position: absolute;
+    left: 50%;
+    bottom: -100%;
+    z-index: 2;
+    transform: translateX(-50%);
+    transition: all 0.3s ease 0s;
+}
+.box:hover .box-content{ bottom: 10px; }
+.box .title{
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+    text-shadow: 0 0 2px #000;
+    margin: 0 0 5px;
+}
+.box .post{
+    color: #fff;
+    background: #b5316a;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: all 0.8s ease 0.3s;
+}
+.box .icon{
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    z-index: 3;
+    transform: translateX(-50%) translateY(-50%);
+    transition: all 0.3s ease 0s;
+}
+.box:hover .icon{ top: 50%; }
+.box .icon li{
+    margin: 0 4px;
+    display: inline-block;
+}
+.box .icon li a{
+    color: #fff;
+    background: #b5316a;
+    font-size: 18px;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.3s ease 0s;
+}
+.box .icon li a:hover{
+    background: #2c3e50;
+    color: #fff;
+    box-shadow: 0 0 10px #2c3e50;
+}
+@media only screen and (max-width:990px){
+    .box{ margin-bottom: 30px; }
+}
+.gallery-filer-2{
+	padding-right: 0px;
+	margin-bottom: 20px;
+	button{
+		width: 100%;
+		margin-bottom: 0px;
+		margin-left: 0px;
+		background-color: #DEDEDE !important;
+		color: #444;
+		border:#CCC;
+		border-radius: 0px;
+		border-bottom: 1px solid #EAEAEA;
+		padding: 15px;
+		text-align: left !important;
+		&:hover{
+			border-color: #b5316a;
+			background-color: #b5316a !important;
+			border-radius: 0px;
+		}
+	}
+}
+.filter{
+	padding: 0px;
+}
+@media screen and (max-width: 872px) {
+	.card-columns{
+		-webkit-column-count: 2;
+		-moz-column-count: 2;
+		column-count: 2;
+	}
+}
+@media screen and (max-width: 570px) {
+	.card-columns{
+		-webkit-column-count: 1;
+		-moz-column-count: 1;
+		column-count: 1;
+	}
+}
+
+/* ===================================== Gallery Style  ================================== */
+
+footer{
+	padding: 50px !important;
+	@media screen and (max-width: 957px){
+		padding: 30px 10px !important;
+		.address-foot{
+			padding-left: 15px;
+		}
+	}
+	background-color: #444;
+	color: #FFF;
+	img{
+		margin-bottom: 15px;
+	}
+	.foot-menu-div{
+		margin-bottom: 20px;
+	}
+	.footer-ablout{
+		p{
+			font-size: 14px;
+			text-align: justify;
+			text-indent: 20px;
+		}
+	}
+	.footer-quick-link{
+		ul{
+			padding-left: 20px;
+			li{
+				padding: 3px;
+				font-size: 14px;
+				i{
+					margin-right: 8px;
+				}
+			}
+		}
+	}
+	.footer-contact-us{
+		font-size: 14px;
+		ul{
+			margin-top: 20px;
+			li{
+				padding: 5px;
+			}
+		}
+	}
+	.footer-news-letter{
+		input{
+			margin-top: 15px;
+			border-radius: 0px;
+		}
+		button{
+			width: 100%;
+			margin-top: 15px;
+			border-radius: 0px;
+			
+		}
+	}
+}
+
+
+/* ===================================== Copyright Style  ================================== */
+
+.copy{
+    background-color: #373737;
+    padding: 20px;
+    color: #FFFFFF;
+    text-align: center;
+	p{
+		text-align: left;
+		font-size: 14px;
+	}
+    a{
+        color: #FFF;
+    }
+    img{
+        width: 20px;
+        margin-left: 7px;
+        margin-right: 2px;
+    }
+	ul{
+		float: right;
+		
+		li{
+			float: left;
+			padding: 0px 20px;
+		}
+	}
+	@media screen and (max-width: 810px){
+		ul{
+			margin-top: 23px;
+			padding-right: 37%;
+		}
+	}
+	@media screen and (max-width: 536px){
+		padding: 20px 0px;
+		ul{
+			margin-top: 23px;
+			padding-right: 17%;
+		}
+	}
+	@media screen and (max-width: 400px){
+		ul{
+			margin-top: 23px;
+			padding-right: 5%;
+		}
+	}
+}
+
+/* ===================================== Header for other pages Style  ================================== */
+
+.header-other-pages{
+	background-image: url(../images/header_bg.jpg);
+	
+	height: 350px;
+	header{
+		height: 350px;
+		box-shadow: none;
+		background: rgba(197, 64, 102, 0.4);
+		background: -webkit-linear-gradient(top, rgba(73, 61, 104, 0.9), rgba(197, 64, 102, 0.4));
+		background: -moz-linear-gradient(top, rgba(73, 61, 104, 0.9), rgba(197, 64, 102, 0.4));
+		background: -o-linear-gradient(top, rgba(73, 61, 104, 0.9), rgba(197, 64, 102, 0.4));
+		background: -ms-linear-gradient(top, rgba(73, 61, 104, 0.9), rgba(197, 64, 102, 0.4));
+		background: linear-gradient(top, rgba(73, 61, 104, 0.9), rgba(197, 64, 102, 0.4));
+	}
+	.page-title{
+		margin-top: 110px;
+		z-index: 999;
+		color: #FFF;
+		ul{
+			float: right;
+			margin-top: -44px;
+			li{
+				float: left;
+				padding: 10px;
+				
+			}
+		}
+		@media screen and (max-width: 600px){
+			margin-top: 80px;
+			ul{
+				float: none;
+				margin-top: 0px;
+			}
+		}
+	}
+}
+
+/* ===================================== About US Style  ================================== */
+.about-us{
+	background-image: url(../images/cross.png);
+	background-size: 100%;
+	padding: 50px;
+	@media screen and (max-width: 600px){
+		padding: 20px 10px;
+	}
+	background-color: #FFF;
+	.about-content{
+		max-width: 800px;
+		float: none;
+		margin: auto;
+		p{
+			text-align: center;
+		}
+	}
+	.our-key-featur{
+		margin-top: 30px;
+		.key-sing{
+			@media screen and (max-width: 600px){
+				padding: 5px;
+			}
+			padding: 25px;
+			i{
+				float: left;
+				margin-right: 10px;
+				font-size: 16px;
+				padding: 10px;
+				border: 1px solid #b5316a;
+				border-radius: 20px;
+				color: #b5316a;
+			}
+			p{
+				margin-top: 20px;
+				text-indent: 15px;
+			}
+			h5{
+				padding-top: 7px;
+			}
+		}
+	}
+}
+.about-us-key{
+	background: none;
+	padding: 60px;
+	@media screen and (max-width: 600px){
+		padding: 20px 10px;
+	}
+	background-color: #FFF;
+	p{
+		margin-bottom: 20px;
+		text-align: justify;
+	}
+	h4{
+		font-size: 1.2rem;
+	}
+	.key-slider{
+		@include shado-1();
+		background-color: #FFF;
+		padding: 7px;
+	}
+}
+
+
+/* ===================================== Our Team Style  ================================== */
+
+.our-pastors{
+	padding: 50px;
+	@media screen and (max-width: 600px){
+		padding: 20px 10px;
+	}
+}
+.our-team{
+    text-align: center;
+	margin-top: 20px;
+	@include shado-3();
+}
+.our-team .team_img{
+    position: relative;
+    overflow: hidden;
+}
+.our-team .team_img:after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.2);
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    transition: all 0.3s ease 0s;
+}
+.our-team:hover .team_img:after{
+    bottom: 0;
+}
+.our-team img{
+    width: 100%;
+    height: auto;
+}
+.our-team .social{
+    padding: 0 0 18px 0;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    top: -100%;
+    right: 10px;
+    background: #b5316a;
+    border-radius: 0 0 20px 20px;
+    z-index: 1;
+    transition: all 0.3s ease 0s;
+}
+.our-team:hover .social{
+    top: 0;
+}
+.our-team .social li a{
+    display: block;
+    padding: 15px;
+    font-size: 15px;
+    color: #fff;
+}
+.our-team:hover .social li a:hover{
+    color: #2a4284;
+}
+.our-team .team-content{
+    padding: 20px 0;
+    background: #fff;
+}
+.our-team .title{
+    font-size: 18px;
+    font-weight: bold;
+    color: #2a4284;
+    text-transform: capitalize;
+    margin: 0 0 20px;
+    position: relative;
+}
+.our-team .title:before{
+    content: "";
+    width: 25px;
+    height: 1px;
+    background: #b5316a;
+    position: absolute;
+    bottom: -10px;
+    right: 50%;
+    margin-right: 9px;
+    transition-duration: 0.25s;
+}
+.our-team .title:after{
+    content: "";
+    width: 25px;
+    height: 1px;
+    background: #b5316a;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    margin-left: 9px;
+    transition-duration: 0.25s;
+}
+.our-team:hover .title:before,
+.our-team:hover .title:after{
+    width: 50px;
+}
+.our-team .post{
+    display: inline-block;
+    font-size: 15px;
+    color:  #b5316a;
+    text-transform: capitalize;
+}
+.our-team .post:before{
+    content: "";
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #b5316a;
+    margin: 0 auto;
+    position: relative;
+    top: -13px;
+}
+@media only screen and (max-width: 990px){
+    .our-team{ margin-bottom: 30px; }
+}
+
+
+/* ===================================== Sermon Style  ================================== */
+.sermon-sing{
+	&:hover{
+		.serm-down{
+			background-color: #b5316a;
+		}
+		h4{
+			color: #b5316a;
+			cursor: pointer;
+		}
+	}
+	.serm-down{
+		background-color: #444;
+		padding: 0px;
+		text-align: center;
+		ul{
+			margin-top: 7px;
+			li{
+				color: #FFF;
+				float: none;
+				padding: 8px;
+				width: 100%;
+				@media screen and (max-width: 575px){
+					width: 33.33%;
+					float: left;
+				}
+			}
+		}
+	}
+}
+
+/* ===================================== Sermon Style  ================================== */
+
+.dontaion{
+	background-color: #FFF;
+	padding: 50px;
+	@media screen and (max-width: 990px){
+         padding: 50px 0px;
+		.don-email{
+			margin-top: 20px;
+		}
+    }
+	.donation-box{
+		float: none;
+		margin: auto;
+		@media screen and (max-width: 990px){
+			padding: 0px;
+		}
+	}
+}
+.form-row{
+	margin-bottom: 20px;
+	label{
+		padding-top: 9px;
+	}
+	.rit-ar{
+		font-weight: 600;
+		float: right;
+		padding-top: 8px;
+		margin-right: 5px;
+	}
+	.radio-group{
+		padding-top: 8px;
+		input{
+			margin-right: 5px;
+		}
+		.rsec{
+			margin-left: 30px;
+			@media screen and (max-width: 400px){
+				margin-left: 10px;
+			}
+		}
+		
+	}
+	.input-group-prepend{
+		background-color: #b5316a;
+		.input-group-text{
+			background-color: #b5316a;
+			color: #FFF;
+		}
+	}
+}
+
+
+/* ===================================== Sermon Style  ================================== */
+
+.our-blog{
+	padding: 50px;
+	@media screen and (max-width: 600px){
+		padding: 20px 10px;
+		.blog-cont{
+			padding: 0px;
+		}
+		.blog-smk{
+			padding: 0px;
+		}
+	}
+	.blog-cont{
+		float: none;
+		margin: auto;
+	}
+	.blog-single{
+		text-align: center;
+		
+		.figure{
+			margin-bottom: 0px;
+		}
+		margin-bottom: 40px;
+	}
+	.blog-single-det{
+		margin: auto;
+		padding: 20px;
+		z-index: 99;
+		@include shado-3();
+		width: 90%;
+		position: relative;
+		margin-top: -80px;
+		background-color: #FFF;
+		.btn{
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+		span{
+			font-size: 13px;
+			color: #b5316a;
+		}
+		h6{
+			font-size: 1.6rem;
+		}
+		p{
+			margin-top: 15px;
+			margin-bottom: 15px;
+			font-size: 1rem;
+		}
+	}
+}
+
+.contact-us{
+	padding: 50px;
+	@media screen and (max-width: 600px){
+		padding: 20px 10px;
+		.evf{
+			margin-top: 20px;
+		}
+	}
+}
+.contact-map{
+	width: 100%;
+	iframe{
+		width: 100%;
+		height: 400px;
+	}
+}
+
+/* ===================================== Single Blog Style  ================================== */
+
+.blog-single-page{
+    padding: 50px;
+    @media screen and (max-width: 990px){
+         padding: 50px 10px;
+    }
+    @media screen and (max-width: 1199px){
+        .container{
+            max-width: 100%;
+        }
+    }
+    background-color: #FFF;
+    img{
+        width: 100%;
+    }
+    h3{
+        margin-top: 20px;
+        margin-bottom: 10px;
+        @media screen and (max-width: 600px){
+            font-size: 22px;
+        }
+    }
+    p{
+        text-align: justify;
+        text-indent: 20px;
+        margin-bottom: 10px;
+        i small {
+            margin-left: 5px;
+            font-size: 100%;
+        }
+        i {
+            margin-right: 10px;
+            font-size: 12px;
+        }
+    }
+    .replay{
+        font-size: 22px;
+        margin-bottom: 0xp
+    }
+    .comment-row{
+        margin-bottom: 20px;
+        b{
+            font-weight: 300;
+        }
+        small{
+            margin-left: 20px;
+        }
+        .comnt-img{
+            text-align: center;
+            img{
+                width: 85%;
+                 @media screen and (max-width: 600px){
+                    width: 100%;
+                }
+            }
+             @media screen and (max-width: 600px){
+            padding: 0px;
+            }
+            
+        } 
+    }
+    .chat-msg-box{
+        h3{
+            width: 100%;
+        }
+        input{
+             margin-bottom: 20px;
+        }
+        textarea,button{
+            margin-bottom: 20px;
+        }
+    }
+    
+    .blog-side{
+        b{
+            font-size: 14px;
+            color: #888;
+            border-left: 3px solid #b5316a;
+            padding-left: 5px;
+            margin-bottom: 10px;
+        }
+        ul{
+            margin-bottom: 10px;
+            li {
+                list-style: none;
+                font-size: 13px;
+                padding: 10px;
+                i{
+                    margin-right: 10px;
+                }
+            } 
+        } 
+        .blp {
+            padding-right: 0px;
+        }
+        .blp-det {
+           
+            @media screen and (max-width: 600px){
+                padding-top: 2px;
+            }
+            padding-right: 0px;
+            p{
+                text-indent: 4px;
+            }
+            b{
+               font-size: 13px;
+                border: 0px;
+                font-weight: 400;
+                color: #424242;  
+            }
+        }
+        
+        
+    }
+}
