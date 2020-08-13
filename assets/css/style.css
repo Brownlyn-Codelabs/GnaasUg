@@ -1137,7 +1137,7 @@ header .small-menu {
 /* ===================================== Gallery Style  ================================== */
 footer {
     padding: 50px !important;
-    background-color: #444;
+    background-color: #011b3a;
     color: #FFF;
 }
 
@@ -1166,24 +1166,45 @@ footer .footer-ablout p {
 }
 
 footer .footer-quick-link ul {
-    padding-left: 20px;
+    padding-left: 13px;
 }
 
 footer .footer-quick-link ul li {
     padding: 3px;
     font-size: 14px;
+    color: #b2b2b2;
+}
+
+
+footer .footer-quick-link ul li:hover {
+  color: #fff;
+text-decoration: underline; 
+    cursor: pointer;
 }
 
 footer .footer-quick-link ul li i {
     margin-right: 8px;
+    color:  #0a3f78; 
 }
+
 
 footer .footer-contact-us {
     font-size: 14px;
+    
 }
 
+footer .footer-contact-us p {
+
+}
+    
+
 footer .footer-contact-us ul {
-    margin-top: 20px;
+    margin-top: 20px;   
+}
+
+footer .footer-contact-us ul span {
+ color: #b2b2b2;
+ 
 }
 
 footer .footer-contact-us ul li {
@@ -1202,18 +1223,33 @@ footer .footer-news-letter button {
 }
 
 /* ===================================== Copyright Style  ================================== */
+/*default footer colors  #444 and  #373737*/
 .copy {
-    background-color: #373737;
+    background-color: #021833;
     padding: 20px;
     color: #FFFFFF;
     text-align: center;
 }
 
+.copy, h4{
+    color: #b2b2b2;
+}
+
+.copy a {
+    text-decoration: none;
+    text-decoration-color: none;
+}
+
 .copy p {
     text-align: left;
     font-size: 14px;
+    color: #fff;
 }
 
+.copy span{
+    color: #b5316a;
+
+}
 .copy a {
     color: #FFF;
 }
@@ -1231,6 +1267,8 @@ footer .footer-news-letter button {
 .copy ul li {
     float: left;
     padding: 0px 20px;
+    color: #fff;
+    
 }
 
 @media screen and (max-width: 810px) {
